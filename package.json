@@ -1,0 +1,15 @@
+{
+  "name": "improved-tappy-plane-with-voice-control",
+  "version": "1.0.0",
+  "description": "Improved version of tappy plane game by RedFoc with voice control feature.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/http-server ./src -c-1"
+  },
+  "keywords": [],
+  "author": "Doni Rahma Tiana",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}

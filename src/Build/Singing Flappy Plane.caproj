@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Singing Flappy Plane</name>
+    <description>Flappy plane with voice recognition as control.</description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1q7fh5mr4jrri</unique-id>
+    <saved-with-version>27200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="UserMedia" version="1">User Media</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="background" sid="743842944767747">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972594063380262" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="plane" sid="156675041074129">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="914412653560751">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="827031613026653">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="red" pingpong="1" repeatcount="1" repeatto="0" sid="613980117997455" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeRed1.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                        <collision-poly>
+                            <point x="0.125" y="0.150685" />
+                            <point x="0.5" y="0" />
+                            <point x="0.784091" y="0.260274" />
+                            <point x="0.977273" y="0.493151" />
+                            <point x="0.920455" y="0.90411" />
+                            <point x="0.5" y="0.876712" />
+                            <point x="0.215909" y="0.739726" />
+                            <point x="0.159091" y="0.493151" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeRed2.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                        <collision-poly>
+                            <point x="0.125" y="0.150685" />
+                            <point x="0.5" y="0" />
+                            <point x="0.784091" y="0.260274" />
+                            <point x="0.977273" y="0.493151" />
+                            <point x="0.863636" y="0.835616" />
+                            <point x="0.5" y="0.876712" />
+                            <point x="0.215909" y="0.739726" />
+                            <point x="0.159091" y="0.493151" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeRed3.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                        <collision-poly>
+                            <point x="0.125" y="0.150685" />
+                            <point x="0.5" y="0" />
+                            <point x="0.784091" y="0.260274" />
+                            <point x="0.977273" y="0.493151" />
+                            <point x="0.863636" y="0.835616" />
+                            <point x="0.5" y="0.876712" />
+                            <point x="0.215909" y="0.739726" />
+                            <point x="0.159091" y="0.493151" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="yellow" pingpong="1" repeatcount="1" repeatto="0" sid="498359600529938" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeYellow1.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeYellow2.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeYellow3.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="green" pingpong="1" repeatcount="1" repeatto="0" sid="683016604962202" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeGreen1.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeGreen2.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeGreen3.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="blue" pingpong="1" repeatcount="1" repeatto="0" sid="186161998228302" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeBlue1.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeBlue2.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeBlue3.png">
+                        <image-point name="Imagepoint 1" x="0.147727" y="0.643836" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="752289572171738">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="groundRock" sid="370197469198342">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="751484541814484" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.507042" original-source="C:\laragon\www\Flappy_Plane\Assets\groundRock.png">
+                        <collision-poly>
+                            <point x="0.0507426" y="0.577465" />
+                            <point x="0.5" y="0.169014" />
+                            <point x="0.964109" y="0.408451" />
+                            <point x="0.998762" y="0.492958" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.00866337" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rock" sid="448475101545192">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523036663924379" speed="1">
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rock.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.150628" />
+                            <point x="0.685185" y="0.142259" />
+                            <point x="0.990741" y="0.995816" />
+                            <point x="0.00925926" y="0.995816" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rockGrass.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.150628" />
+                            <point x="0.685185" y="0.142259" />
+                            <point x="0.990741" y="0.995816" />
+                            <point x="0.00925926" y="0.995816" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rockSnow.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.150628" />
+                            <point x="0.685185" y="0.142259" />
+                            <point x="0.990741" y="0.995816" />
+                            <point x="0.00925926" y="0.995816" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rockIce.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.150628" />
+                            <point x="0.685185" y="0.142259" />
+                            <point x="0.990741" y="0.995816" />
+                            <point x="0.00925926" y="0.995816" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rockDown" sid="715921355201377">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="544850699741172" speed="1">
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rockDown.png">
+                        <collision-poly>
+                            <point x="0.00925926" y="0.0041841" />
+                            <point x="0.990741" y="0.0041841" />
+                            <point x="0.685185" y="0.857741" />
+                            <point x="0.5" y="0.849372" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rockGrassDown.png">
+                        <collision-poly>
+                            <point x="0.00925926" y="0.0041841" />
+                            <point x="0.990741" y="0.0041841" />
+                            <point x="0.685185" y="0.857741" />
+                            <point x="0.5" y="0.849372" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rockSnowDown.png">
+                        <collision-poly>
+                            <point x="0.00925926" y="0.0041841" />
+                            <point x="0.990741" y="0.0041841" />
+                            <point x="0.685185" y="0.857741" />
+                            <point x="0.5" y="0.849372" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.502092" original-source="C:\laragon\www\Flappy_Plane\Assets\rockIceDown.png">
+                        <collision-poly>
+                            <point x="0.00925926" y="0.0041841" />
+                            <point x="0.990741" y="0.0041841" />
+                            <point x="0.685185" y="0.857741" />
+                            <point x="0.5" y="0.849372" />
+                            <point x="0.342593" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="puffLarge" sid="999475091901281">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="488213645729449">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="816953546888936">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="309723374325330">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="126474217897377" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\laragon\www\Flappy_Plane\Assets\puffLarge.png">
+                        <collision-poly>
+                            <point x="0.190476" y="0.228571" />
+                            <point x="0.5" y="0" />
+                            <point x="0.809524" y="0.228571" />
+                            <point x="0.97619" y="0.485714" />
+                            <point x="0.809524" y="0.771429" />
+                            <point x="0.5" y="1" />
+                            <point x="0.166667" y="0.8" />
+                            <point x="0" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52381" original-source="C:\laragon\www\Flappy_Plane\Assets\puffSmall.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.238095" />
+                            <point x="0.48" y="0" />
+                            <point x="0.8" y="0.238095" />
+                            <point x="1" y="0.47619" />
+                            <point x="0.8" y="0.761905" />
+                            <point x="0.48" y="1" />
+                            <point x="0.16" y="0.809524" />
+                            <point x="0" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="starGold" sid="871280508080202">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="531371392212941" speed="5">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\starGold.png">
+                        <collision-poly>
+                            <point x="0.230769" y="0.236842" />
+                            <point x="0.487179" y="0" />
+                            <point x="0.769231" y="0.236842" />
+                            <point x="0.948718" y="0.5" />
+                            <point x="0.846154" y="0.842105" />
+                            <point x="0.487179" y="0.921053" />
+                            <point x="0.153846" y="0.842105" />
+                            <point x="0.0512821" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScoreText" sid="419499078402087">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GameOverBackground" sid="293733613146366">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="GameOverLabel" sid="299794498835688">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="657079284868277" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\UI\UIbg.png">
+                        <collision-poly>
+                            <point x="0.026699" y="0.141026" />
+                            <point x="0.970874" y="0.153846" />
+                            <point x="0.970874" y="0.846154" />
+                            <point x="0.0339806" y="0.820513" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TryAgainButton" sid="337894517075470">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630937316341903" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\UI\buttonSmall.png">
+                        <collision-poly>
+                            <point x="0.0147059" y="0.025" />
+                            <point x="0.5" y="0" />
+                            <point x="0.985294" y="0.025" />
+                            <point x="1" y="0.5" />
+                            <point x="0.985294" y="0.975" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0147059" y="0.975" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TryAgainText" sid="501517865707099">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HighscoreText" sid="541838872013721">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="UserMedia" sid="301273942441271">
+            <plugin id="UserMedia" />
+        </object-type>
+        <object-type name="Audio" sid="233495595656178">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="SoundText" sid="621446579425953">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AudioText" sid="838313146745338">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AudioInputLabel" sid="190926087817187">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PrepareBackground" sid="486311574988483">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="GetReadyLabel" sid="207234035561306">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227456958976340" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\UI\textGetReady.png">
+                        <collision-poly>
+                            <point x="0.0225" y="0.123288" />
+                            <point x="0.5" y="0.123288" />
+                            <point x="0.985" y="0.0821918" />
+                            <point x="0.9425" y="0.684932" />
+                            <point x="0.5" y="0.849315" />
+                            <point x="0.0325" y="0.821918" />
+                            <point x="0" y="0.493151" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CountPlayLabel" sid="637391013344873">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869347064311034" speed="1">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Numbers\number3.png" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.506494" original-source="C:\laragon\www\Flappy_Plane\Assets\Numbers\number2.png" />
+                    <frame duration="1" hotspotX="0.513514" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Numbers\number1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChoosePlane1" sid="127092544829058">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="516602491086419">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="844026888395209">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="329208478111034" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeRed1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeRed2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeRed3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterC" sid="243146628699049">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="415732840638035" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterC.png">
+                        <collision-poly>
+                            <point x="0.173077" y="0.136364" />
+                            <point x="0.5" y="0" />
+                            <point x="0.923077" y="0.0606061" />
+                            <point x="0.403846" y="0.5" />
+                            <point x="0.865385" y="0.893939" />
+                            <point x="0.5" y="0.939394" />
+                            <point x="0.192308" y="0.848485" />
+                            <point x="0.0192308" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterH" sid="598361633015589">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="717994215576422" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterH.png">
+                        <collision-poly>
+                            <point x="0.0196078" y="0.015625" />
+                            <point x="0.490196" y="0.296875" />
+                            <point x="0.980392" y="0.015625" />
+                            <point x="1" y="0.5" />
+                            <point x="0.921569" y="0.9375" />
+                            <point x="0.490196" y="0.59375" />
+                            <point x="0.0784314" y="0.9375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterO" sid="130620366186298">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184382281366237" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterO.png">
+                        <collision-poly>
+                            <point x="0.133333" y="0.121212" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.136364" />
+                            <point x="0.983333" y="0.5" />
+                            <point x="0.816667" y="0.833333" />
+                            <point x="0.5" y="0.939394" />
+                            <point x="0.183333" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterS" sid="202034188088870">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="521844434199980" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterS.png">
+                        <collision-poly>
+                            <point x="0.130435" y="0.0909091" />
+                            <point x="0.5" y="0" />
+                            <point x="0.913043" y="0.0606061" />
+                            <point x="0.956522" y="0.5" />
+                            <point x="0.826087" y="0.878788" />
+                            <point x="0.5" y="0.939394" />
+                            <point x="0.152174" y="0.893939" />
+                            <point x="0.152174" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterE" sid="568813192501228">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="497191888379740" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterE.png">
+                        <collision-poly>
+                            <point x="0.0444444" y="0.03125" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.955556" y="0.03125" />
+                            <point x="0.911111" y="0.5" />
+                            <point x="0.911111" y="0.9375" />
+                            <point x="0.0888889" y="0.9375" />
+                            <point x="0.0222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterY" sid="568586210959668">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119412712972953" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterY.png">
+                        <collision-poly>
+                            <point x="0.0350877" y="0.03125" />
+                            <point x="0.491228" y="0.25" />
+                            <point x="0.964912" y="0.03125" />
+                            <point x="0.736842" y="0.5" />
+                            <point x="0.684211" y="0.71875" />
+                            <point x="0.491228" y="0.9375" />
+                            <point x="0.333333" y="0.703125" />
+                            <point x="0.280702" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterU" sid="942711828697747">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177723822885643" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterU.png">
+                        <collision-poly>
+                            <point x="0.0392157" y="0.030303" />
+                            <point x="0.490196" y="0.636364" />
+                            <point x="0.960784" y="0.030303" />
+                            <point x="1" y="0.5" />
+                            <point x="0.823529" y="0.863636" />
+                            <point x="0.490196" y="0.924242" />
+                            <point x="0.196078" y="0.848485" />
+                            <point x="0.0196078" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterR" sid="843329977058243">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="850196904349027" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.507692" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterR.png">
+                        <collision-poly>
+                            <point x="0.0392157" y="0.0307692" />
+                            <point x="0.490196" y="0" />
+                            <point x="0.843137" y="0.123077" />
+                            <point x="0.901961" y="0.923077" />
+                            <point x="0.490196" y="0.784615" />
+                            <point x="0.0980392" y="0.923077" />
+                            <point x="0" y="0.492308" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterA" sid="553703900386174">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="691592801056024" speed="5">
+                    <frame duration="1" hotspotX="0.508197" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterA.png">
+                        <collision-poly>
+                            <point x="0.245902" y="0.234375" />
+                            <point x="0.491803" y="0" />
+                            <point x="0.754098" y="0.234375" />
+                            <point x="0.852459" y="0.5" />
+                            <point x="0.934426" y="0.9375" />
+                            <point x="0.491803" y="0.765625" />
+                            <point x="0.0655738" y="0.9375" />
+                            <point x="0.131148" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterP" sid="289343624582424">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936272782441852" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterP.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0307692" />
+                            <point x="0.5" y="0" />
+                            <point x="0.875" y="0.0923077" />
+                            <point x="0.9375" y="0.492308" />
+                            <point x="0.541667" y="0.661538" />
+                            <point x="0.5" y="0.661538" />
+                            <point x="0.104167" y="0.923077" />
+                            <point x="0" y="0.492308" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterL" sid="394846166519710">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356076945088684" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterL.png">
+                        <collision-poly>
+                            <point x="0.0454545" y="0.03125" />
+                            <point x="0.5" y="0.640625" />
+                            <point x="0.477273" y="0.359375" />
+                            <point x="0.477273" y="0.5" />
+                            <point x="0.909091" y="0.9375" />
+                            <point x="0.0909091" y="0.9375" />
+                            <point x="0.0227273" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterN" sid="805576766472561">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="196433925305575" speed="5">
+                    <frame duration="1" hotspotX="0.509434" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterN.png">
+                        <collision-poly>
+                            <point x="0.0188679" y="0.015625" />
+                            <point x="0.490566" y="0.203125" />
+                            <point x="0.962264" y="0.03125" />
+                            <point x="0.981132" y="0.5" />
+                            <point x="0.924528" y="0.9375" />
+                            <point x="0.490566" y="0.703125" />
+                            <point x="0.0754717" y="0.9375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChoosePlane2" sid="917942582103034">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="309459887354169">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="296111430743357">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="294277956172538" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeYellow1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeYellow2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeYellow3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChoosePlane3" sid="478765019779205">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="143897268183797">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="711815996298188">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="147216234142144" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeGreen1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeGreen2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeGreen3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChoosePlane4" sid="522108292109928">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="919875233230835">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="409487539157555">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="908596584197519" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeBlue1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeBlue2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\laragon\www\Flappy_Plane\Assets\Planes\planeBlue3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="letterI" sid="171912050335062">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="477840841250130" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\laragon\www\Flappy_Plane\Assets\Letters\letterI.png">
+                        <collision-poly>
+                            <point x="0.0909091" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.909091" y="0.03125" />
+                            <point x="0.954545" y="0.5" />
+                            <point x="0.818182" y="0.9375" />
+                            <point x="0.181818" y="0.9375" />
+                            <point x="0.0454545" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RMSMeter" sid="953514557240326">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Plane1Text" sid="830396009907620">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Plane4Text" sid="745615325230675">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Plane2Text" sid="716924272662723">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Plane3Text" sid="658745517864938">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="2">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="19">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="crashed.m4a" />
+        <file name="crashed.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="background.m4a" />
+        <file name="background.ogg" />
+        <file name="gameover.m4a" />
+        <file name="gameover.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
